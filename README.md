@@ -104,7 +104,7 @@ This [**Ethernet_Manager_Portenta_H7** library](https://github.com/khoih-prog/Et
 
 ---
  
-#### Supported Ethernet shields/modules:
+#### Currently supported Ethernet shields/modules
 
 1. Portenta_H7 using Ethernet from [Portenta Vision shields](https://store-usa.arduino.cc/products/arduino-portenta-vision-shield-ethernet)
 
@@ -959,6 +959,11 @@ Pubs Topics = new-mqtt-PubTopic
 This is the terminal output of PORTENTA_H7_M7 with Ethernet from Portenta Vision shield, running [MQTT_Ethernet_Portenta_H7](examples/MQTT_Ethernet_Portenta_H7) example.
 
 
+<p align="center">
+    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/blob/main/pics/MQTT_ConfigPortal.png">
+</p>
+
+
 #### 2.1 Initial start, LittleFS format and Config Portal
 
 ```
@@ -1009,6 +1014,12 @@ HHHHHHHHH HHHHHHHHHH HH
 ```
 
 #### 2.2 Save and Exit Config Portal
+
+
+<p align="center">
+    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/blob/main/pics/MQTT_ConfigPortal_Saved.png">
+</p>
+
 
 ```
 Start MQTT_Ethernet_Portenta_H7 on PORTENTA_H7_M7
