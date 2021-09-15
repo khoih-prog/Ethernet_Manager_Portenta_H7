@@ -1,0 +1,55 @@
+{
+  "name": "Ethernet_Manager_Portenta_H7",
+  "version": "1.6.0",
+  "keywords": "communication, ethernet, config-portal, Double-Reset, dynamic-params, LittleFS, LittleFS-Portenta, littlefs-mbed, posix, file-system, mbed, mbed-portenta, portenta-h7, portentah7, portenta-h7-m7, portenta-h7-m4, portentah7-m7, portentah7-m4, DynamicParameters, customs-header",
+  "description": "Simple Ethernet Manager for Portenta_H7 board using Ethernet from Portenta Vision shield. Config data saved in LittleFS. For configuring/auto(re)connecting Ethernet at runtime. Use much less memory compared to full-fledge WiFiManager. Config Portal (CP) will be auto-adjusted to match the number of dynamic custom parameters. Optional default Credentials to be autoloaded into CP to use or change instead of manually input. Credentials are saved in LittleFS. New powerful-yet-simple-to-use feature to enable adding dynamic parameters from sketch and input using the same CP. DoubleDetectDetector as well as Virtual Switches feature permits entering CP as requested. Configurable HTML Headers, Customs Style, Head Elements, CORS Header",
+  "authors":
+  {
+    "name":  "Khoi Hoang",
+    "url":   "https://github.com/khoih-prog",
+    "maintainer": true
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "//https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7"
+  },
+  "homepage": "https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7",
+  "export": {
+    "exclude": [
+      "linux",
+      "extras",
+      "tests"
+    ]
+  },
+  "dependencies": 
+  [
+    {
+      "owner": "khoih-prog",
+      "name": "EthernetWebServer",
+      "version": ">=1.7.0",
+      "platforms": ["*"]
+    },
+    {
+      "owner": "khoih.prog",
+      "name": "DoubleResetDetector_Generic",
+      "version": ">=1.7.2",
+      "platforms": ["*"]
+    },
+    {
+      "owner": "khoih-prog",
+      "name": "Functional-Vlpp",
+      "version": ">=1.0.2",
+      "platforms": ["*"]
+    },
+    {
+      "owner": "khoih.prog",
+      "name": "LittleFS_Portenta_H7",
+      "version": "^1.0.2",
+      "platforms": ["mbed_portenta"]
+    }
+  ],
+  "frameworks": "*",
+  "platforms": "mbed_portenta",
+  "examples": "examples/*/*/*.ino"
+}
