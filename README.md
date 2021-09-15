@@ -109,7 +109,7 @@ This [**Ethernet_Manager_Portenta_H7** library](https://github.com/khoih-prog/Et
 1. Portenta_H7 using Ethernet from [Portenta Vision shields](https://store-usa.arduino.cc/products/arduino-portenta-vision-shield-ethernet)
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/WiFiManager_Portenta_H7_Lite/blob/main/pics/Portenta_Vision.jpg">
+    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/blob/main/pics/Portenta_Vision.jpg">
 </p>
 
 ---
