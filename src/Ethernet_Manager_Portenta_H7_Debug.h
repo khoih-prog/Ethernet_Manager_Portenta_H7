@@ -8,11 +8,12 @@
   Built by Khoi Hoang https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7
   Licensed under MIT license
 
-  Version: 1.6.0
+  Version: 1.6.1
 
   Version  Modified By   Date      Comments
   -------  -----------  ---------- -----------
   1.6.0     K Hoang     15/09/2021  Add support to Portenta_H7 using Arduino mbed_portenta core
+  1.6.1     K Hoang     10/10/2021  Update `platform.ini` and `library.json`
  *****************************************************************************************************************************/
 
 #pragma once

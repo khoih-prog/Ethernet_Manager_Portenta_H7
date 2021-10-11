@@ -8,11 +8,12 @@
   Built by Khoi Hoang https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7
   Licensed under MIT license
 
-  Version: 1.6.0
+  Version: 1.6.1
 
   Version  Modified By   Date      Comments
   -------  -----------  ---------- -----------
   1.6.0     K Hoang     15/09/2021  Add support to Portenta_H7 using Arduino mbed_portenta core
+  1.6.1     K Hoang     10/10/2021  Update `platform.ini` and `library.json`
 *****************************************************************************************************************************/
 
 #pragma once
@@ -39,7 +40,7 @@
   #error This code is intended to run on the MBED ARDUINO_PORTENTA_H7 platform! Please check your Tools->Board setting. 
 #endif
 
-#define ETHERNET_MANAGER_PORTENTA_H7_VERSION        "EthernetManager_Portenta_H7 v1.6.0"
+#define ETHERNET_MANAGER_PORTENTA_H7_VERSION        "EthernetManager_Portenta_H7 v1.6.1"
 
 // Increase HTTP_UPLOAD_BUFLEN to 4K, instead of default 2K in <EthernetWebServer.h>
 #define HTTP_UPLOAD_BUFLEN    4096

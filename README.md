@@ -66,7 +66,7 @@
 
 ### Important Notes for Portenta_H7
 
-The LittleFS of the new **Portenta_H7** board currently tested OK with only **maximum 8 files**. The files, from 9 and up, somehow strangely can't be written and / or read. This is possibly a bug in the [`ArduinoCore-mbed mbed_portenta core`](https://github.com/arduino/ArduinoCore-mbed). The same behaviour is observed from core v2.0.0 up to v2.4.1.
+The LittleFS of the new **Portenta_H7** board currently tested OK with only **maximum 8 files**. The files, from 9 and up, somehow strangely can't be written and / or read. This is possibly a bug in the [`ArduinoCore-mbed mbed_portenta core`](https://github.com/arduino/ArduinoCore-mbed). The same behaviour is observed from core v2.0.0 up to v2.5.2.
 
 If LittleFS size is reduced to 1024KB, test is OK with only **maximum 4 files**.
 
@@ -119,10 +119,10 @@ This [**Ethernet_Manager_Portenta_H7** library](https://github.com/khoih-prog/Et
 ## Prerequisites
 
  1. [`Arduino IDE 1.8.16+` for Arduino](https://www.arduino.cc/en/Main/Software)
- 2. [`ArduinoCore-mbed mbed_portenta core 2.4.1+`](https://github.com/arduino/ArduinoCore-mbed) for Arduino **Portenta_H7** boards, such as **Portenta_H7 Rev2 ABX00042, etc.**. [![GitHub release](https://img.shields.io/github/release/arduino/ArduinoCore-mbed.svg)](https://github.com/arduino/ArduinoCore-mbed/releases/latest)
+ 2. [`ArduinoCore-mbed mbed_portenta core 2.5.2+`](https://github.com/arduino/ArduinoCore-mbed) for Arduino **Portenta_H7** boards, such as **Portenta_H7 Rev2 ABX00042, etc.**. [![GitHub release](https://img.shields.io/github/release/arduino/ArduinoCore-mbed.svg)](https://github.com/arduino/ArduinoCore-mbed/releases/latest)
  3. [`Functional-VLPP library v1.0.2+`](https://github.com/khoih-prog/functional-vlpp) to use server's lambda function. To install. check [![arduino-library-badge](https://www.ardu-badge.com/badge/Functional-Vlpp.svg?)](https://www.ardu-badge.com/Functional-Vlpp)
- 4. [`EthernetWebServer library v1.4.0+`](https://github.com/khoih-prog/EthernetWebServer). To install. check [![arduino-library-badge](https://www.ardu-badge.com/badge/WiFiWebServer.svg?)](https://www.ardu-badge.com/EthernetWebServer)
- 5. [`DoubleResetDetector_Generic v1.7.2+`](https://github.com/khoih-prog/DoubleResetDetector_Generic). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/DoubleResetDetector_Generic.svg?)](https://www.ardu-badge.com/DoubleResetDetector_Generic)
+ 4. [`EthernetWebServer library v1.7.1+`](https://github.com/khoih-prog/EthernetWebServer). To install. check [![arduino-library-badge](https://www.ardu-badge.com/badge/EthernetWebServer.svg?)](https://www.ardu-badge.com/EthernetWebServer)
+ 5. [`DoubleResetDetector_Generic v1.7.3+`](https://github.com/khoih-prog/DoubleResetDetector_Generic). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/DoubleResetDetector_Generic.svg?)](https://www.ardu-badge.com/DoubleResetDetector_Generic)
  6. [`LittleFS_Portenta_H7 v1.0.2+`](https://github.com/khoih-prog/LittleFS_Portenta_H7). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/LittleFS_Portenta_H7.svg?)](https://www.ardu-badge.com/LittleFS_Portenta_H7) 
 
 ---
@@ -158,12 +158,12 @@ The best way is to use `Arduino Library Manager`. Search for `Ethernet_Manager_P
 
 #### 1. For Portenta_H7 boards using Arduino IDE in Linux
 
-  **To be able to upload firmware to Portenta_H7 using Arduino IDE in Linux (Ubuntu, etc.)**, you have to copy the file [portenta_post_install.sh](Packages_Patches/arduino/hardware/mbed_portenta/2.4.1/portenta_post_install.sh) into mbed_portenta directory (~/.arduino15/packages/arduino/hardware/mbed_portenta/2.4.1/portenta_post_install.sh). 
+  **To be able to upload firmware to Portenta_H7 using Arduino IDE in Linux (Ubuntu, etc.)**, you have to copy the file [portenta_post_install.sh](Packages_Patches/arduino/hardware/mbed_portenta/2.5.2/portenta_post_install.sh) into mbed_portenta directory (~/.arduino15/packages/arduino/hardware/mbed_portenta/2.5.2/portenta_post_install.sh). 
   
   Then run the following command using `sudo`
   
 ```
-$ cd ~/.arduino15/packages/arduino/hardware/mbed_portenta/2.4.1
+$ cd ~/.arduino15/packages/arduino/hardware/mbed_portenta/2.5.2
 $ chmod 755 portenta_post_install.sh
 $ sudo ./portenta_post_install.sh
 ```
@@ -176,9 +176,9 @@ This will create the file `/etc/udev/rules.d/49-portenta_h7.rules` as follows:
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="035b", GROUP="plugdev", MODE="0666"
 ```
 
-Supposing the ArduinoCore-mbed core version is 2.4.1. Now only one file must be copied into the directory:
+Supposing the ArduinoCore-mbed core version is 2.5.2. Now only one file must be copied into the directory:
 
-- `~/.arduino15/packages/arduino/hardware/mbed_portenta/2.4.1/portenta_post_install.sh`
+- `~/.arduino15/packages/arduino/hardware/mbed_portenta/2.5.2/portenta_post_install.sh`
 
 Whenever a new version is installed, remember to copy this files into the new version directory. For example, new version is x.yy.zz
 
@@ -867,8 +867,8 @@ This is the terminal output of PORTENTA_H7_M7 with Ethernet from Portenta Vision
 ```cpp
 Start Ethernet_Portenta_H7 on PORTENTA_H7_M7
 Ethernet Shield type : Ethernet using Portenta_Ethernet Library
-EthernetManager_Portenta_H7 v1.6.0
-DoubleResetDetector_Generic v1.7.2
+EthernetManager_Portenta_H7 v1.6.1
+DoubleResetDetector_Generic v1.7.3
 Flash Size: (KB) = 2048.00
 FlashIAP Start Address: = 0x8080000
 LittleFS size (KB) = 1536.00
@@ -913,8 +913,8 @@ h:Updating LittleFS: /littlefs/config.etm
 ```
 Start Ethernet_Portenta_H7 on PORTENTA_H7_M7
 Ethernet Shield type : Ethernet using Portenta_Ethernet Library
-EthernetManager_Portenta_H7 v1.6.0
-DoubleResetDetector_Generic v1.7.2
+EthernetManager_Portenta_H7 v1.6.1
+DoubleResetDetector_Generic v1.7.3
 Flash Size: (KB) = 2048.00
 FlashIAP Start Address: = 0x8080000
 LittleFS size (KB) = 1536.00
@@ -969,8 +969,8 @@ This is the terminal output of PORTENTA_H7_M7 with Ethernet from Portenta Vision
 ```
 Start MQTT_Ethernet_Portenta_H7 on PORTENTA_H7_M7
 Ethernet Shield type : Ethernet using Portenta_Ethernet Library
-EthernetManager_Portenta_H7 v1.6.0
-DoubleResetDetector_Generic v1.7.2
+EthernetManager_Portenta_H7 v1.6.1
+DoubleResetDetector_Generic v1.7.3
 Flash Size: (KB) = 2048.00
 FlashIAP Start Address: = 0x8080000
 LittleFS size (KB) = 1536.00
@@ -1024,8 +1024,8 @@ HHHHHHHHH HHHHHHHHHH HH
 ```
 Start MQTT_Ethernet_Portenta_H7 on PORTENTA_H7_M7
 Ethernet Shield type : Ethernet using Portenta_Ethernet Library
-EthernetManager_Portenta_H7 v1.6.0
-DoubleResetDetector_Generic v1.7.2
+EthernetManager_Portenta_H7 v1.6.1
+DoubleResetDetector_Generic v1.7.3
 Flash Size: (KB) = 2048.00
 FlashIAP Start Address: = 0x8080000
 LittleFS size (KB) = 1536.00

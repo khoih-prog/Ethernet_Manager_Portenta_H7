@@ -13,12 +13,17 @@
 ## Table of Contents
 
 * [Changelog](#changelog)
+  * [Release v1.6.1](#release-v161)
   * [Initial Release v1.6.0](#initial-release-v160)
 
 ---
 ---
 
 ## Changelog
+
+### Release v1.6.1
+
+1. Update `platform.ini` and `library.json` to use original `khoih-prog` instead of `khoih.prog` after PIO fix
 
 ### Initial Release v1.6.0
 
