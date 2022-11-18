@@ -73,7 +73,7 @@ The LittleFS of the new **Portenta_H7** board currently tested OK with only **ma
 
 If LittleFS size is reduced to 1024KB, test is OK with only **maximum 4 files**.
 
-Beware and keep cheking for updates.
+Beware and keep checking for updates.
 
 ---
 ---
