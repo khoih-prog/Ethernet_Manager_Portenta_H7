@@ -1,4 +1,4 @@
-## Ethernet_Manager_Portenta_H7
+## Ethernet_Manager_Portenta_H7 Library
 
 [![arduino-library-badge](https://www.ardu-badge.com/badge/Ethernet_Manager_Portenta_H7.svg?)](https://www.ardu-badge.com/Ethernet_Manager_Portenta_H7)
 [![GitHub release](https://img.shields.io/github/release/khoih-prog/Ethernet_Manager_Portenta_H7.svg)](https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/releases)
@@ -6,7 +6,11 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](#Contributing)
 [![GitHub issues](https://img.shields.io/github/issues/khoih-prog/Ethernet_Manager_Portenta_H7.svg)](http://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/issues)
 
-<a href="https://www.buymeacoffee.com/khoihprog6" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+<a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Donate to my libraries using BuyMeACoffee" style="height: 50px !important;width: 181px !important;" ></a>
+<a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-orange.svg?logo=buy-me-a-coffee&logoColor=FFDD00" style="height: 20px !important;width: 200px !important;" ></a>
+<a href="https://profile-counter.glitch.me/khoih-prog/count.svg" title="Total khoih-prog Visitor count"><img src="https://profile-counter.glitch.me/khoih-prog/count.svg" style="height: 30px;width: 200px;"></a>
+<a href="https://profile-counter.glitch.me/khoih-prog-Ethernet_Manager_Portenta_H7/count.svg" title="Ethernet_Manager_Portenta_H7 Visitor count"><img src="https://profile-counter.glitch.me/khoih-prog-Ethernet_Manager_Portenta_H7/count.svg" style="height: 30px;width: 200px;"></a>
 
 ---
 ---
@@ -69,7 +73,7 @@
 
 ### Important Notes for Portenta_H7
 
-The LittleFS of the new **Portenta_H7** board currently tested OK with only **maximum 8 files**. The files, from 9 and up, somehow strangely can't be written and / or read. This is possibly a bug in the [`ArduinoCore-mbed mbed_portenta core`](https://github.com/arduino/ArduinoCore-mbed). The same behaviour is observed from core v2.0.0 up to v2.5.2.
+The LittleFS of the new **Portenta_H7** board currently tested OK with only **maximum 8 files**. The files, from 9 and up, somehow strangely can't be written and / or read. This is possibly a bug in the [`ArduinoCore-mbed mbed_portenta core`](https://github.com/arduino/ArduinoCore-mbed). The same behaviour is observed from core v2.0.0 up to v3.4.1.
 
 If LittleFS size is reduced to 1024KB, test is OK with only **maximum 4 files**.
 
@@ -112,7 +116,7 @@ This [**Ethernet_Manager_Portenta_H7** library](https://github.com/khoih-prog/Et
 1. Portenta_H7 using Ethernet from [Portenta Vision shields](https://store-usa.arduino.cc/products/arduino-portenta-vision-shield-ethernet)
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/blob/main/pics/Portenta_Vision.jpg">
+    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/raw/main/pics/Portenta_Vision.jpg">
 </p>
 
 ---
@@ -122,11 +126,11 @@ This [**Ethernet_Manager_Portenta_H7** library](https://github.com/khoih-prog/Et
 ## Prerequisites
 
  1. [`Arduino IDE 1.8.19+` for Arduino](https://github.com/arduino/Arduino). [![GitHub release](https://img.shields.io/github/release/arduino/Arduino.svg)](https://github.com/arduino/Arduino/releases/latest)
- 2. [`ArduinoCore-mbed mbed_portenta core 2.6.1+`](https://github.com/arduino/ArduinoCore-mbed) for Arduino **Portenta_H7** boards, such as **Portenta_H7 Rev2 ABX00042, etc.**. [![GitHub release](https://img.shields.io/github/release/arduino/ArduinoCore-mbed.svg)](https://github.com/arduino/ArduinoCore-mbed/releases/latest)
+ 2. [`ArduinoCore-mbed mbed_portenta core 3.4.1+`](https://github.com/arduino/ArduinoCore-mbed) for Arduino **Portenta_H7** boards, such as **Portenta_H7 Rev2 ABX00042, etc.**. [![GitHub release](https://img.shields.io/github/release/arduino/ArduinoCore-mbed.svg)](https://github.com/arduino/ArduinoCore-mbed/releases/latest)
  3. [`Functional-Vlpp library v1.0.2+`](https://github.com/khoih-prog/functional-vlpp) to use server's lambda function. To install. check [![arduino-library-badge](https://www.ardu-badge.com/badge/Functional-Vlpp.svg?)](https://www.ardu-badge.com/Functional-Vlpp)
- 4. [`EthernetWebServer library v2.0.0+`](https://github.com/khoih-prog/EthernetWebServer). To install. check [![arduino-library-badge](https://www.ardu-badge.com/badge/EthernetWebServer.svg?)](https://www.ardu-badge.com/EthernetWebServer)
- 5. [`DoubleResetDetector_Generic v1.8.0+`](https://github.com/khoih-prog/DoubleResetDetector_Generic). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/DoubleResetDetector_Generic.svg?)](https://www.ardu-badge.com/DoubleResetDetector_Generic)
- 6. [`LittleFS_Portenta_H7 v1.1.0+`](https://github.com/khoih-prog/LittleFS_Portenta_H7). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/LittleFS_Portenta_H7.svg?)](https://www.ardu-badge.com/LittleFS_Portenta_H7) 
+ 4. [`EthernetWebServer library v2.3.0+`](https://github.com/khoih-prog/EthernetWebServer). To install. check [![arduino-library-badge](https://www.ardu-badge.com/badge/EthernetWebServer.svg?)](https://www.ardu-badge.com/EthernetWebServer)
+ 5. [`DoubleResetDetector_Generic v1.8.1+`](https://github.com/khoih-prog/DoubleResetDetector_Generic). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/DoubleResetDetector_Generic.svg?)](https://www.ardu-badge.com/DoubleResetDetector_Generic)
+ 6. [`LittleFS_Portenta_H7 v1.2.0+`](https://github.com/khoih-prog/LittleFS_Portenta_H7). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/LittleFS_Portenta_H7.svg?)](https://www.ardu-badge.com/LittleFS_Portenta_H7) 
 
 ---
 ---
@@ -150,7 +154,7 @@ The best way is to use `Arduino Library Manager`. Search for `Ethernet_Manager_P
 
 1. Install [VS Code](https://code.visualstudio.com/)
 2. Install [PlatformIO](https://platformio.org/platformio-ide)
-3. Install [**Ethernet_Manager_Portenta_H7** library](https://platformio.org/lib/show/12827/Ethernet_Manager_Portenta_H7) by using [Library Manager](https://platformio.org/lib/show/12827/Ethernet_Manager_Portenta_H7/installation). Search for Ethernet_Manager_Portenta_H7 in [Platform.io Author's Libraries](https://platformio.org/lib/search?query=author:%22Khoi%20Hoang%22)
+3. Install [**Ethernet_Manager_Portenta_H7** library](https://registry.platformio.org/libraries/khoih-prog/Ethernet_Manager_Portenta_H7) by using [Library Manager](https://registry.platformio.org/libraries/khoih-prog/Ethernet_Manager_Portenta_H7/installation). Search for Ethernet_Manager_Portenta_H7 in [Platform.io Author's Libraries](https://platformio.org/lib/search?query=author:%22Khoi%20Hoang%22)
 4. Use included [platformio.ini](platformio/platformio.ini) file from examples to ensure that all dependent libraries will installed automatically. Please visit documentation for the other options and examples at [Project Configuration File](https://docs.platformio.org/page/projectconf.html)
 
 
@@ -161,12 +165,12 @@ The best way is to use `Arduino Library Manager`. Search for `Ethernet_Manager_P
 
 #### 1. For Portenta_H7 boards using Arduino IDE in Linux
 
-  **To be able to upload firmware to Portenta_H7 using Arduino IDE in Linux (Ubuntu, etc.)**, you have to copy the file [portenta_post_install.sh](Packages_Patches/arduino/hardware/mbed_portenta/2.5.2/portenta_post_install.sh) into mbed_portenta directory (~/.arduino15/packages/arduino/hardware/mbed_portenta/2.5.2/portenta_post_install.sh). 
+  **To be able to upload firmware to Portenta_H7 using Arduino IDE in Linux (Ubuntu, etc.)**, you have to copy the file [portenta_post_install.sh](Packages_Patches/arduino/hardware/mbed_portenta/3.4.1/portenta_post_install.sh) into mbed_portenta directory (~/.arduino15/packages/arduino/hardware/mbed_portenta/3.4.1/portenta_post_install.sh). 
   
   Then run the following command using `sudo`
   
 ```
-$ cd ~/.arduino15/packages/arduino/hardware/mbed_portenta/2.5.2
+$ cd ~/.arduino15/packages/arduino/hardware/mbed_portenta/3.4.1
 $ chmod 755 portenta_post_install.sh
 $ sudo ./portenta_post_install.sh
 ```
@@ -179,9 +183,9 @@ This will create the file `/etc/udev/rules.d/49-portenta_h7.rules` as follows:
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="035b", GROUP="plugdev", MODE="0666"
 ```
 
-Supposing the ArduinoCore-mbed core version is 2.5.2. Now only one file must be copied into the directory:
+Supposing the ArduinoCore-mbed core version is 3.4.1. Now only one file must be copied into the directory:
 
-- `~/.arduino15/packages/arduino/hardware/mbed_portenta/2.5.2/portenta_post_install.sh`
+- `~/.arduino15/packages/arduino/hardware/mbed_portenta/3.4.1/portenta_post_install.sh`
 
 Whenever a new version is installed, remember to copy this files into the new version directory. For example, new version is x.yy.zz
 
@@ -209,12 +213,14 @@ To fix [`Adafruit_MQTT_Library library`](https://github.com/adafruit/Adafruit_MQ
 See this example and modify as necessary
 
 1. To load [Default Credentials](examples/Ethernet_Generic/Credentials.h)
-```
+
+```cpp
 bool LOAD_DEFAULT_CONFIG_DATA = true;
 ```
 
 2. To use system default to load "blank" when there is no valid Credentials
-```
+
+```cpp
 bool LOAD_DEFAULT_CONFIG_DATA = false;
 ```
 
@@ -291,7 +297,7 @@ Ethernet_Manager ethernet_manager;
 
 - To add custom parameters, just add
 
-```
+```cpp
 #ifndef dynamicParams_h
 #define dynamicParams_h
 
@@ -362,7 +368,7 @@ Ethernet_Manager ethernet_manager;
 
 - If you don't need to add dynamic parameters, use the following in sketch
 
-```
+```cpp
 #define USE_DYNAMIC_PARAMETERS      false
 ```
 
@@ -376,7 +382,7 @@ ethernet_manager.begin();
 
 #### 5. To use custom HTML Style
 
-```
+```cpp
 const char NewCustomsStyle[] /*PROGMEM*/ = "<style>div,input{padding:5px;font-size:1em;}input{width:95%;}body{text-align: center;}\
 button{background-color:blue;color:white;line-height:2.4rem;font-size:1.2rem;width:100%;}fieldset{border-radius:0.3rem;margin:0px;}</style>";
 
@@ -388,13 +394,13 @@ ethernet_manager.setCustomsStyle(NewCustomsStyle);
 #### 6. To use custom Head Elements
 
 
-```
+```cpp
 ethernet_manager.setCustomsHeadElement("<style>html{filter: invert(10%);}</style>");
 ```
 
 #### 7. To use CORS Header
 
-```
+```cpp
 ethernet_manager.setCORSHeader("Your Access-Control-Allow-Origin");
 ```
 
@@ -437,19 +443,19 @@ If no valid config data are stored in LittleFS, it will switch to `Configuration
 After you connected to, for example, `192.168.2.132`, the Browser will display the following picture:
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/blob/main/pics/ConfigPortal.png">
+    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/raw/main/pics/ConfigPortal.png">
 </p>
 
 Enter your credentials (Blynk Servers/Tokens and Port). If you prefer static IP, input it (for example `192.168.2.222`) in the corresponding field. Otherwise, just leave it `blank` or `nothing` to use auto IP assigned by DHCP server.
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/blob/main/pics/ConfigPortal_Data.png">
+    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/raw/main/pics/ConfigPortal_Data.png">
 </p>
 
 Then click `Save`. After the  board auto-restarted, you will see if it's connected to your Blynk server successfully as in  the following picture:
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/blob/main/pics/Saved.png">
+    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/raw/main/pics/Saved.png">
 </p>
 
 This `ethernet_manager.run()` is not a blocking call, so you can use it for critical functions requiring in loop(). 
@@ -471,7 +477,7 @@ void loop()
 
 #### 1. File [Ethernet_Portenta_H7.ino](examples/Ethernet_Portenta_H7/Ethernet_Portenta_H7.ino)
 
-```
+```cpp
 #include "defines.h"
 #include "Credentials.h"
 #include "dynamicParams.h"
@@ -629,7 +635,7 @@ void loop()
 
 #### 2. File [defines.h](examples/Ethernet_Portenta_H7/defines.h)
 
-```
+```cpp
 #ifndef defines_h
 #define defines_h
 
@@ -726,7 +732,7 @@ void loop()
 
 #### 3. File [Credentials.h](examples/Ethernet_Portenta_H7/Credentials.h)
 
-```
+```cpp
 #ifndef Credentials_h
 #define Credentials_h
 
@@ -788,7 +794,7 @@ Ethernet_Configuration defaultConfig;
 
 #### 4. File [dynamicParams.h](examples/Ethernet_Portenta_H7/dynamicParams.h)
 
-```
+```cpp
 #ifndef dynamicParams_h
 #define dynamicParams_h
 
@@ -913,7 +919,7 @@ h:Updating LittleFS: /littlefs/config.etm
 
 #### 1.2 Save and Exit Config Portal
 
-```
+```cpp
 Start Ethernet_Portenta_H7 on PORTENTA_H7_M7
 Ethernet Shield type : Ethernet using Portenta_Ethernet Library
 EthernetManager_Portenta_H7 v1.6.1
@@ -963,13 +969,13 @@ This is the terminal output of PORTENTA_H7_M7 with Ethernet from Portenta Vision
 
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/blob/main/pics/MQTT_ConfigPortal.png">
+    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/raw/main/pics/MQTT_ConfigPortal.png">
 </p>
 
 
 #### 2.1 Initial start, LittleFS format and Config Portal
 
-```
+```cpp
 Start MQTT_Ethernet_Portenta_H7 on PORTENTA_H7_M7
 Ethernet Shield type : Ethernet using Portenta_Ethernet Library
 EthernetManager_Portenta_H7 v1.6.1
@@ -1020,11 +1026,11 @@ HHHHHHHHH HHHHHHHHHH HH
 
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/blob/main/pics/MQTT_ConfigPortal_Saved.png">
+    <img src="https://github.com/khoih-prog/Ethernet_Manager_Portenta_H7/raw/main/pics/MQTT_ConfigPortal_Saved.png">
 </p>
 
 
-```
+```cpp
 Start MQTT_Ethernet_Portenta_H7 on PORTENTA_H7_M7
 Ethernet Shield type : Ethernet using Portenta_Ethernet Library
 EthernetManager_Portenta_H7 v1.6.1
@@ -1160,4 +1166,4 @@ If you want to contribute to this project:
 
 ### Copyright
 
-Copyright 2021- Khoi Hoang
+Copyright (c) 2021- Khoi Hoang

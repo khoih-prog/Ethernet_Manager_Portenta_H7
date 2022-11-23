@@ -14,7 +14,7 @@
 
 #if ( ( defined(ARDUINO_PORTENTA_H7_M7) || defined(ARDUINO_PORTENTA_H7_M4) ) && defined(ARDUINO_ARCH_MBED) )
   #warning Use MBED ARDUINO_PORTENTA_H7 and LittleFS
-  
+
   #if defined(BOARD_NAME)
     #undef BOARD_NAME
   #endif
@@ -28,14 +28,14 @@
   #endif
 
   #define USE_ETHERNET_PORTENTA_H7    true
-  
+
   #include <Portenta_Ethernet.h>
   #include <Ethernet.h>
   #warning Using Portenta_Ethernet lib for Portenta_H7.
   #define SHIELD_TYPE           "Ethernet using Portenta_Ethernet Library"
-  
+
 #else
-  #error This code is intended to run on the MBED ARDUINO_PORTENTA_H7 platform! Please check your Tools->Board setting. 
+  #error This code is intended to run on the MBED ARDUINO_PORTENTA_H7 platform! Please check your Tools->Board setting.
 #endif
 
 /////////////////////////////////////////////

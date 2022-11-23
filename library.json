@@ -27,13 +27,13 @@
     {
       "owner": "khoih-prog",
       "name": "EthernetWebServer",
-      "version": ">=1.7.1",
+      "version": ">=2.3.0",
       "platforms": ["*"]
     },
     {
       "owner": "khoih-prog",
       "name": "DoubleResetDetector_Generic",
-      "version": ">=1.7.3",
+      "version": ">=1.8.1",
       "platforms": ["*"]
     },
     {
@@ -45,11 +45,12 @@
     {
       "owner": "khoih-prog",
       "name": "LittleFS_Portenta_H7",
-      "version": "^1.0.2",
+      "version": "^1.2.0",
       "platforms": ["mbed_portenta"]
     }
   ],
   "frameworks": "*",
   "platforms": "mbed_portenta",
-  "examples": "examples/*/*/*.ino"
+  "examples": "examples/*/*/*.ino",
+  "headers": ["Ethernet_Manager_Portenta_H7.h"]
 }

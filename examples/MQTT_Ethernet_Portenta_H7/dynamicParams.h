@@ -37,7 +37,7 @@
 #define AIO_USERNAME_LEN     20
 #define AIO_KEY_LEN          40
 
-// 
+//
 #define AIO_PUB_TOPIC_LEN    40
 #define AIO_SUB_TOPIC_LEN    40
 

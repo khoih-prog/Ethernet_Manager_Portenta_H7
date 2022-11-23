@@ -91,8 +91,14 @@ void createNewInstances()
     if (mqtt)
     {
       Serial.println(F("Creating new MQTT object OK"));
-      Serial.print(F("AIO_SERVER = ")); Serial.print(AIO_SERVER); Serial.print(F(", AIO_SERVERPORT = ")); Serial.println(AIO_SERVERPORT);
-      Serial.print(F("AIO_USERNAME = ")); Serial.print(AIO_USERNAME); Serial.print(F(", AIO_KEY = ")); Serial.println(AIO_KEY);
+      Serial.print(F("AIO_SERVER = "));
+      Serial.print(AIO_SERVER);
+      Serial.print(F(", AIO_SERVERPORT = "));
+      Serial.println(AIO_SERVERPORT);
+      Serial.print(F("AIO_USERNAME = "));
+      Serial.print(AIO_USERNAME);
+      Serial.print(F(", AIO_KEY = "));
+      Serial.println(AIO_KEY);
     }
     else
       Serial.println(F("Creating new MQTT object failed"));
@@ -108,12 +114,14 @@ void createNewInstances()
 #endif
 
     Temperature = new Adafruit_MQTT_Publish(mqtt, completePubTopic.c_str());
-    Serial.print(F("Creating new MQTT_Pub_Topic,  Temperature = ")); Serial.println(completePubTopic);
+    Serial.print(F("Creating new MQTT_Pub_Topic,  Temperature = "));
+    Serial.println(completePubTopic);
 
     if (Temperature)
     {
       Serial.println(F("Creating new Temperature object OK"));
-      Serial.print(F("Temperature MQTT_Pub_Topic = ")); Serial.println(completePubTopic);
+      Serial.print(F("Temperature MQTT_Pub_Topic = "));
+      Serial.println(completePubTopic);
     }
     else
       Serial.println(F("Creating new Temperature object failed"));
@@ -130,12 +138,14 @@ void createNewInstances()
 
     LED_Control = new Adafruit_MQTT_Subscribe(mqtt, completeSubTopic.c_str());
 
-    Serial.print(F("Creating new AIO_SUB_TOPIC, LED_Control = ")); Serial.println(completeSubTopic);
+    Serial.print(F("Creating new AIO_SUB_TOPIC, LED_Control = "));
+    Serial.println(completeSubTopic);
 
     if (LED_Control)
     {
       Serial.println(F("Creating new LED_Control object OK"));
-      Serial.print(F("LED_Control AIO_SUB_TOPIC = ")); Serial.println(completeSubTopic);
+      Serial.print(F("LED_Control AIO_SUB_TOPIC = "));
+      Serial.println(completeSubTopic);
 
       mqtt->subscribe(LED_Control);
     }
@@ -240,14 +250,14 @@ void heartBeatPrint()
 {
   static int num        = 1;
   static int linkStatus = 0;
-  
+
   localEthernetIP = Ethernet.localIP();
-  
+
   // The linkStatus() is not working with W5100. Just using IP != 0.0.0.0
   // Better to use ping for W5100
   linkStatus = (int) Ethernet.linkStatus();
   ET_LOGINFO3("localEthernetIP = ", localEthernetIP, ", linkStatus = ", (linkStatus == LinkON) ? "LinkON" : "LinkOFF" );
-  
+
   if ( ( (linkStatus == LinkON) ) && ((uint32_t) localEthernetIP != 0) )
   {
     Serial.print(F("H"));
@@ -275,10 +285,11 @@ void heartBeatPrint()
 void check_status()
 {
   static unsigned long checkstatus_timeout = 0;
-  static bool ledPowerOn = false; 
+  static bool ledPowerOn = false;
 
   //KH
 #define HEARTBEAT_INTERVAL    5000L
+
   // Print Ethernet hearbeat, Publish MQTT Topic every HEARTBEAT_INTERVAL (5) seconds.
   if ((millis() > checkstatus_timeout) || (checkstatus_timeout == 0))
   {
@@ -304,8 +315,9 @@ void check_status()
 ///////////////////////////
 
 #if USING_CUSTOMS_STYLE
-const char NewCustomsStyle[] /*PROGMEM*/ = "<style>div,input{padding:5px;font-size:1em;}input{width:95%;}body{text-align: center;}\
-button{background-color:blue;color:white;line-height:2.4rem;font-size:1.2rem;width:100%;}fieldset{border-radius:0.3rem;margin:0px;}</style>";
+  const char NewCustomsStyle[] /*PROGMEM*/ =
+  "<style>div,input{padding:5px;font-size:1em;}input{width:95%;}body{text-align: center;}\
+  button{background-color:blue;color:white;line-height:2.4rem;font-size:1.2rem;width:100%;}fieldset{border-radius:0.3rem;margin:0px;}</style>";
 #endif
 
 ///////////////////////////
@@ -314,18 +326,21 @@ void setup()
 {
   pinMode(LEDB, OUTPUT);
   digitalWrite(LEDB, LED_OFF);
-      
+
   // Debug console
   Serial.begin(115200);
+
   while (!Serial);
 
-  Serial.print("\nStart MQTT_Ethernet_Portenta_H7 on "); Serial.println(BOARD_NAME); 
-  Serial.print("Ethernet Shield type : "); Serial.println(SHIELD_TYPE);
+  Serial.print("\nStart MQTT_Ethernet_Portenta_H7 on ");
+  Serial.println(BOARD_NAME);
+  Serial.print("Ethernet Shield type : ");
+  Serial.println(SHIELD_TYPE);
   Serial.println(ETHERNET_MANAGER_PORTENTA_H7_VERSION);
   Serial.println(DOUBLERESETDETECTOR_GENERIC_VERSION);
 
   //////////////////////////////////////////////
-  
+
 #if USING_CUSTOMS_STYLE
   ethernet_manager.setCustomsStyle(NewCustomsStyle);
 #endif
@@ -334,7 +349,7 @@ void setup()
   ethernet_manager.setCustomsHeadElement("<style>html{filter: invert(10%);}</style>");
 #endif
 
-#if USING_CORS_FEATURE  
+#if USING_CORS_FEATURE
   ethernet_manager.setCORSHeader("Your Access-Control-Allow-Origin");
 #endif
 
@@ -395,12 +410,12 @@ void displayCredentialsOnce()
 ///////////////////////////
 
 void loop()
-{  
+{
   inConfigMode = ethernet_manager.run();
-  
+
   check_status();
-  
-  #if (USE_DYNAMIC_PARAMETERS)
-    displayCredentialsOnce();
-  #endif
+
+#if (USE_DYNAMIC_PARAMETERS)
+  displayCredentialsOnce();
+#endif
 }
